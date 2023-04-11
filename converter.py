@@ -110,7 +110,7 @@ def generate_terraform_from_json(json_data):
         variable_block += indent_block(
             f'hide_from_ui = {str(variable["hideFromUI"]).lower()}\n'
         )
-        variable_block += indent_block("source_defintion {\n")
+        variable_block += indent_block("source_definition {\n")
         source_defintion = variable["sourceDefinition"]
         temp = re.sub(
             r"(?<!^)(?=[A-Z])", "_", source_defintion["variableSourceType"]
